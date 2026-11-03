@@ -25,31 +25,44 @@ function BitStreamForm({ onSubmit }) {
 
   if (n === null)
     return (
-      <form className="form" onSubmit={askLength}>
-        <h2>Line Coding</h2>
+      <form
+        className="grid gap-3 max-w-sm mx-auto mt-10 p-4"
+        onSubmit={askLength}
+      >
+        <h2 className="text-xl font-bold">Line Coding</h2>
         <label>Size/length of the bit stream</label>
         <input
+          className="border rounded px-2 py-1"
           type="number"
           value={len}
           onChange={(e) => setLen(e.target.value)}
         />
-        {err && <p className="err">{err}</p>}
-        <button>Next</button>
+        {err && <p className="text-red-600">{err}</p>}
+        <button className="bg-blue-600 text-white rounded px-3 py-1">
+          Next
+        </button>
       </form>
     );
 
   return (
-    <form className="form" onSubmit={send}>
-      <h2>Enter {n} bits</h2>
+    <form className="grid gap-3 max-w-sm mx-auto mt-10 p-4" onSubmit={send}>
+      <h2 className="text-xl font-bold">Enter {n} bits</h2>
       <input
+        className="border rounded px-2 py-1"
         value={bits}
         maxLength={n}
         onChange={(e) => setBits(e.target.value)}
         placeholder="e.g. 111001011000"
       />
-      {err && <p className="err">{err}</p>}
-      <button>Generate</button>
-      <button type="button" onClick={() => setN(null)}>
+      {err && <p className="text-red-600">{err}</p>}
+      <button className="bg-blue-600 text-white rounded px-3 py-1">
+        Generate
+      </button>
+      <button
+        type="button"
+        className="border rounded px-3 py-1"
+        onClick={() => setN(null)}
+      >
         Back
       </button>
     </form>

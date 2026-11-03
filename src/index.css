@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.scroll {
+  overflow-x: auto;
+}
+.cell {
+  border: 1px solid #ccc;
+  padding: 4px 2px;
+  font-size: 11px;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 28px;
+}
+.bit {
+  font-weight: 700;
+  background: #eef;
+}
