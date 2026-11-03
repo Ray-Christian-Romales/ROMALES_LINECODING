@@ -1,4 +1,4 @@
 import { unipolar } from "./unipolar";
-import { nrzL } from "./nrz";
+import { nrzL, nrzI } from "./nrz";
 
-export const SCHEMES = [unipolar, nrzL];
+export const SCHEMES = [unipolar, nrzL, nrzI];
