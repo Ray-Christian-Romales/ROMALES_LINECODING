@@ -17,3 +17,23 @@ export const ami = {
     });
   },
 };
+
+export const pseudoternary = {
+  id: "pseudo",
+  name: "Bipolar Pseudoternary",
+  run(bits) {
+    let last = -1;
+    return bits.map((b) => {
+      let v = 0;
+      if (!b) {
+        last = -last;
+        v = last;
+      } // 0s alternate, first is pos
+      return {
+        bit: b,
+        label: v > 0 ? "pos" : v < 0 ? "neg" : "zero",
+        h: [v, v],
+      };
+    });
+  },
+};

@@ -2,7 +2,7 @@ import { unipolar } from "./unipolar";
 import { nrzL, nrzI } from "./nrz";
 import { rz } from "./rz";
 import { manchester, diffManchester } from "./manchester";
-import { ami } from "./ami";
+import { ami, pseudoternary } from "./ami";
 
 export const SCHEMES = [
   unipolar,
@@ -12,4 +12,5 @@ export const SCHEMES = [
   manchester,
   diffManchester,
   ami,
+  pseudoternary,
 ];
