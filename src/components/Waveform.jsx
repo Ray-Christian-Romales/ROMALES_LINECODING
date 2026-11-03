@@ -3,7 +3,7 @@ const H = 100,
   AMP = 35,
   MID = H / 2;
 
-export default function Waveform({ segments }) {
+function Waveform({ segments }) {
   const y = (v) => MID - v * AMP;
   let d = "";
   segments.forEach((s, i) => {
@@ -49,3 +49,5 @@ export default function Waveform({ segments }) {
     </svg>
   );
 }
+
+export default Waveform;
